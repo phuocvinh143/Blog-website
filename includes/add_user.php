@@ -1,5 +1,6 @@
 <?php 
 	require('db.inc.php');
+	require('function.php');
 	if(isset($_POST['signup'])) {
 		$full_name = $conn->real_escape_string($_POST['full_name']);
 		$email = $conn->real_escape_string($_POST['email']);
@@ -9,7 +10,8 @@
 		
 		if ($conn->query($query)) {
 			// echo "<script>alert('Register successful!');</script>";
-			header('Location:login.php');
+			redirect('login.php');
+			// header('Location:login.php');
 		}
 		else {
 			echo "<script>alert('Your email address already existed!');</script>";

@@ -21,14 +21,12 @@
 		$image_name = $_FILES['post_image']['name'];
 		$image_tmp = $_FILES['post_image']['tmp_name'];
 
-		print_r($_FILES['post_image']);
+		// print_r($_FILES['post_image']);
 		foreach ($_FILES["post_image"]["tmp_name"] as $key => $tmp_name){
 			move_uploaded_file($_FILES['post_image']['tmp_name'][$key], '../images/' . $_FILES['post_image']['name'][$key]);
 			$query = "INSERT INTO images(post_id, image) VALUES ('$post_id', '$image_name[$key]');";
 			$run = $conn->query($query);
 		}
-
-		header('location:../post.php?id='. $post_id);
+		redirect("../post.php?id=$post_id");
 	}
-
 ?>

@@ -1,5 +1,6 @@
 <?php 
     require('db.inc.php');
+    require('function.php');
     if (isset($_POST['update_post'])) {
         $post_id = $_POST['post_id_for_modify'];
         $title = $_POST['title'];
@@ -31,7 +32,7 @@
 
         $query = "UPDATE posts SET title = '$title', content = '$content', category_id = $category_id WHERE id = $post_id";
         if (mysqli_query($conn, $query)) {
-            header('Location:../post.php?id='. $post_id);
+            redirect('../post.php?id='. $post_id);
         }
         else  {
             echo "Error: " . mysqli_error($conn);

@@ -1,8 +1,8 @@
 <?php
   require('includes/db.inc.php');
-
+  require('includes/function.php');
   if(isset($_SESSION['isUserLoggedIn']) && $_SESSION['isUserLoggedIn']) {
-    header('Location:index.php');
+    redirect('index.php');
   }
 
   if(isset($_POST['login'])) {
@@ -14,7 +14,7 @@
     if($runQuery->num_rows != 0) {
       $_SESSION['isUserLoggedIn'] = true;
       $_SESSION['email'] = $email;
-      header('Location:index.php?page=1');
+      redirect('index.php?page=1');
     } else {
       echo "<script>alert('Incorrect email or password!');</script>";
     }

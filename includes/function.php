@@ -1,5 +1,4 @@
 <?php
-
 	function getCategory($conn, $id){
 		$query="SELECT * FROM category WHERE id=$id";
 		$run = $conn->query($query);
@@ -175,5 +174,8 @@
 		$data = $run->fetch_assoc();
 		return $data;
 	}
-           
+    function redirect($url){
+		echo "<script type='text/javascript'>document.location.href='{$url}';</script>";
+		echo '<META HTTP-EQUIV="refresh" content="0; URL=' . $url . '">';
+	}
 ?>

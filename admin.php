@@ -2,7 +2,7 @@
   require('includes/db.inc.php');
   include('includes/function.php');
   if (!isset($_SESSION['isUserLoggedIn'])) {
-    header('Location:login.php');
+    redirect('login.php');
   }
 
 ?>

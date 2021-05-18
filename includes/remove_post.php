@@ -1,6 +1,6 @@
 <?php
 	require('db.inc.php');
-
+	require('function.php');
 	$id = $_GET['id'];	
 
 	// delete image in server storage
@@ -18,6 +18,6 @@
 	$query = "DELETE FROM posts WHERE id = '$id'";
 	$run = $conn->query($query);
 
-	header('location:../admin.php?managepost');
+	redirect('../admin.php?managepost');
 ?>
 
