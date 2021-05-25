@@ -4,7 +4,7 @@ services:
         build: 
             context: .
             dockerfile: Dockerfile
-        image: php:7.4.3-apache
+        image: phuocvinh143/php:7.4.3-apache
         container_name: php74
         depends_on: 
             - db
@@ -14,7 +14,7 @@ services:
             - 8000:80
     db: 
         container_name: mysql80
-        image: mysql:8.0 
+        image: phuocvinh143/php:8.0-mysql
         command: --default-authentication-plugin=mysql_native_password
         restart: always
         volumes:
