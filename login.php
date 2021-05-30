@@ -1,27 +1,28 @@
 <?php
-  require('includes/db.inc.php');
-  require('includes/function.php');
-  if(isset($_SESSION['isUserLoggedIn']) && $_SESSION['isUserLoggedIn']) {
-    redirect('index.php');
-  }
+require('includes/db.inc.php');
+require('includes/function.php');
+if (isset($_SESSION['isUserLoggedIn']) && $_SESSION['isUserLoggedIn']) {
+  redirect('index.php');
+}
 
-  if(isset($_POST['login'])) {
-    $email = $conn->real_escape_string($_POST['email']);
-    $password = $conn->real_escape_string($_POST['password']);
+if (isset($_POST['login'])) {
+  $email = $conn->real_escape_string($_POST['email']);
+  $password = $conn->real_escape_string($_POST['password']);
 
-    $query = "SELECT * FROM admin WHERE email = '$email' AND password = '$password'";
-    $runQuery = $conn->query($query);
-    if($runQuery->num_rows != 0) {
-      $_SESSION['isUserLoggedIn'] = true;
-      $_SESSION['email'] = $email;
-      redirect('index.php?page=1');
-    } else {
-      echo "<script>alert('Incorrect email or password!');</script>";
-    }
+  $query = "SELECT * FROM admin WHERE email = '$email' AND password = '$password'";
+  $runQuery = $conn->query($query);
+  if ($runQuery->num_rows != 0) {
+    $_SESSION['isUserLoggedIn'] = true;
+    $_SESSION['email'] = $email;
+    redirect('index.php?page=1');
+  } else {
+    echo "<script>alert('Incorrect email or password!');</script>";
   }
+}
 ?>
 
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,15 +30,16 @@
   <link rel="icon" href="images/icon.jpg" type="image/x-icon">
   <link href="styles/style.css" rel="stylesheet">
   <style>
-    :root{
-      --main-bg:white;
+    :root {
+      --main-bg: white;
     }
 
     .main-bg {
       background: var(--main-bg) !important;
     }
 
-    input:focus, button:focus {
+    input:focus,
+    button:focus {
       border: 1px solid var(--main-bg) !important;
       box-shadow: none !important;
     }
@@ -47,8 +49,10 @@
       border-color: var(--main-bg) !important;
     }
 
-    .card, .btn, input{
-      border-radius:0 !important;
+    .card,
+    .btn,
+    input {
+      border-radius: 0 !important;
     }
   </style>
 </head>
@@ -60,7 +64,7 @@
       <div class="col-lg-4 col-md-6 col-sm-6">
         <div class="card shadow">
           <div class="card-title text-center border-bottom">
-            <h1 class="p-3">BLOGBOOK</h1>
+            <h1 class="p-3"><a href="index.php" style="text-decoration: none; color: black">BLOGBOOK</a></h1>
             <p style="font-weight: bold">Login to Blogbook</p>
           </div>
           <div class="card-body">

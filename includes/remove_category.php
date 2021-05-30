@@ -5,5 +5,3 @@
 	$query = "DELETE FROM category WHERE id = '$cid'";
 	$run = $conn->query($query);
 	redirect('../admin.php?managecategory');
-?>
- 

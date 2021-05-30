@@ -174,8 +174,13 @@
 		$data = $run->fetch_assoc();
 		return $data;
 	}
-    function redirect($url){
+
+  function redirect($url){
 		echo "<script type='text/javascript'>document.location.href='{$url}';</script>";
 		echo '<META HTTP-EQUIV="refresh" content="0; URL=' . $url . '">';
 	}
-?>
+	
+	function getAbstract($content) {
+		return substr($content, 0, strpos($content, "<br>") - 1);
+	}
+

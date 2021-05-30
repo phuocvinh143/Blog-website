@@ -10,9 +10,7 @@
 		
 		if($conn->query($query)) {
 			redirect("../post.php?id=$post_id");
-			// header("location:../post.php?id=$post_id");
 		} else {
 			echo "comment is not added";
 		}
 	}
-?>

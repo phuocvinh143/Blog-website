@@ -5,4 +5,3 @@
 	$run = mysqli_query($conn, $query);
 	$reviews = mysqli_fetch_all($run, MYSQLI_ASSOC);
 	echo json_encode($reviews);
-?>

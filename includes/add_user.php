@@ -16,5 +16,4 @@
 		else {
 			echo "<script>alert('Your email address already existed!');</script>";
 		}
-	} 
-?>
+	}

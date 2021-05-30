@@ -17,4 +17,3 @@
 		$run = $conn->query($query);
 		redirect('../admin/index.php?managemenu');
  	}
-?>

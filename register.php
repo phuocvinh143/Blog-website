@@ -1,8 +1,9 @@
 <?php
-	require('includes/add_user.php');
+require('includes/add_user.php');
 ?>
 
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,15 +11,16 @@
   <link rel="icon" href="../images/icon.jpg" type="image/x-icon">
   <link href="styles/style.css" rel="stylesheet">
   <style>
-    :root{
-      --main-bg:white;
+    :root {
+      --main-bg: white;
     }
 
     .main-bg {
       background: var(--main-bg) !important;
     }
 
-    input:focus, button:focus {
+    input:focus,
+    button:focus {
       border: 1px solid var(--main-bg) !important;
       box-shadow: none !important;
     }
@@ -28,8 +30,10 @@
       border-color: var(--main-bg) !important;
     }
 
-    .card, .btn, input{
-      border-radius:0 !important;
+    .card,
+    .btn,
+    input {
+      border-radius: 0 !important;
     }
   </style>
 </head>
@@ -41,15 +45,15 @@
       <div class="col-lg-4 col-md-6 col-sm-6">
         <div class="card shadow">
           <div class="card-title text-center border-bottom">
-            <h1 class="p-3">BLOGBOOK</h1>
+            <h1 class="p-3"><a href="index.php" style="text-decoration: none; color: black">BLOGBOOK</a></h1>
             <p style="font-weight: bold">Sign up with Blogbook</p>
           </div>
           <div class="card-body">
             <form method="post">
-							<div class="mb-4">
-								<label for="full_name" class="form-label">Full Name</label>
-								<input type="text" class="form-control" name="full_name" />
-							</div>
+              <div class="mb-4">
+                <label for="full_name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" name="full_name" />
+              </div>
               <div class="mb-4">
                 <label for="username" class="form-label">Email</label>
                 <input type="email" class="form-control" name="email" />

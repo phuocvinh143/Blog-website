@@ -7,4 +7,3 @@
 		$run = $conn->query($query);
 		redirect('../admin.php?managecategory');
 	}
-?>
