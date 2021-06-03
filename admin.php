@@ -4,7 +4,6 @@ include('includes/function.php');
 if (!isset($_SESSION['isUserLoggedIn'])) {
   redirect('login.php');
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +32,6 @@ if (!isset($_SESSION['isUserLoggedIn'])) {
         if (this.readyState == 4 && this.status == 200) {
           var review = JSON.parse(this.responseText)[0]
           for (key in review) {
-            // console.log(document.getElementsByName(key))
             document.getElementsByName(key)[0].value = review[key]
           }
         }
@@ -64,7 +62,6 @@ if (!isset($_SESSION['isUserLoggedIn'])) {
         </form>
       </div>
     </div>
-  </div>
   </div>
   <!-- Modal Add Category -->
 

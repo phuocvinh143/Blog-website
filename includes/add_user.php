@@ -9,9 +9,7 @@
 		$query = "INSERT INTO admin(full_name, email, password) VALUES ('$full_name', '$email', '$password')";
 		
 		if ($conn->query($query)) {
-			// echo "<script>alert('Register successful!');</script>";
 			redirect('login.php');
-			// header('Location:login.php');
 		}
 		else {
 			echo "<script>alert('Your email address already existed!');</script>";

@@ -148,8 +148,6 @@ require('includes/function.php');
     </div> <!-- container -->
   </div> <!-- final -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Share Button -->
-  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60965d3db1d8977f"></script>
 </body>
 
 </html>

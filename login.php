@@ -71,11 +71,11 @@ if (isset($_POST['login'])) {
             <form method="post">
               <div class="mb-4">
                 <label for="username" class="form-label">Email</label>
-                <input type="email" class="form-control" name="email" />
+                <input type="email" class="form-control" name="email" required/>
               </div>
               <div class="mb-4">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" name="password" />
+                <input type="password" class="form-control" name="password" required/>
               </div>
               <div class="d-grid">
                 <button type="submit" class="btn btn-dark" name="login">Login</button>
